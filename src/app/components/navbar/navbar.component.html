@@ -1,0 +1,42 @@
+
+<div class="container-xxl bg-white p-0"></div>
+
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+    <a routerLink="index.html" class="navbar-brand">
+        <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Little Feats</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto">
+            
+            <a routerLink="/" class="nav-item nav-link" >Home</a>
+            <a routerLink="/about" class="nav-item nav-link" >About Us</a>
+            <a routerLink="/classes" class="nav-item nav-link">Classes</a>
+           
+            <div class="nav-item dropdown">
+                <a routerLink="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                    <a routerLink="/explore" class="dropdown-item">Explore Little Feats</a>
+                    <a routerLink="/facilities" class="dropdown-item">School Facilities</a>
+                    <a routerLink="/appointment-details" class="dropdown-item">Make Appointment</a>
+                    
+                </div>
+            </div>
+            <a routerLink="/contact" class="nav-item nav-link">Contact Us</a>
+        </div>
+        <a routerLink="/signup" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">SignUp<i class="fa fa-arrow-right ms-3"></i></a>
+        <a routerLink="/login" class="btn btn-primary" *ngIf="!(userService.isloggedin | async)">Login</a>
+        <a  routerLink="/login" *ngIf="(userService.isloggedin | async)"  class="btn btn-primary" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<!-- Navbar End -->
+
+<router-outlet></router-outlet>
+
+
+
+

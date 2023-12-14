@@ -1,0 +1,30 @@
+<!-- Appointment Start -->
+
+    <h1>appointment-details!</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Guardian Name</th>
+                <th scope="col">Guardian Email</th>
+                <th scope="col">Child Name</th>
+                <th scope="col">ChildAge</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appointment of appointments">
+                <th scope="row">{{ appointment.id }}</th>
+                <td>{{ appointment.guardianName }}</td>
+                <td>{{ appointment.guardianEmail }}</td>
+                <td>{{ appointment.childName }}</td>
+                <td>{{ appointment.childAge }}</td>
+                <td>{{ appointment.phoneNumber }}</td>
+                <!-- Update the button in your HTML template -->
+            <td><button (click)="deleteGuardianAppointment(appointment.id)" type="button" class="btn btn-warning">Delete</button> &nbsp;</td>
+
+            </tr>
+        </tbody>
+    </table>
+    

@@ -1,0 +1,67 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin-inline-start: 0%;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #360505;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+/* Add this style to limit the height of the sidebar */
+.side-navbar {
+  width: 200px;
+  background-color:snow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80%; /* Adjust as needed */
+  max-height: calc(100% - 20px); /* 90px is the height of your header, adjust as needed */
+  padding-top: 90px; /* Adjust as needed based on your header height */
+  z-index: 1;
+  overflow-y: auto; /* Add this to enable scrolling if the content is too tall */
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+/* ... your existing styles ... */
+
+
+
+
+.side-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color:black;
+}
+
+.side-navbar li {
+  padding: 15px;
+  text-align: center;
+}
+
+.side-navbar a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.side-navbar a:hover {
+  background-color: #555;
+}
+
+
+
+.active {
+  background-color:burlywood;
+}

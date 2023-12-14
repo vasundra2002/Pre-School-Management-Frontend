@@ -1,0 +1,17 @@
+<div class="card text-center">
+    <div class="card-header">
+     Student Details
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{myStudent.name}}</h5>
+      <p class="card-text">{{myStudent.standard}}</p>
+      <p class="card-text">{{myStudent.age}}</p>
+      <p class="card-text">{{myStudent.email}}</p>
+      <p class="card-text">{{myStudent.phonenumber}}</p>
+      <a (click)="gotoMyStudentList()" class="btn btn-primary">Go back to MyStudents</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+  <router-outlet></router-outlet>

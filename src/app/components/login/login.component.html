@@ -1,0 +1,17 @@
+
+<form #loginForm="ngForm" (ngSubmit)="loginProcess(loginForm)">
+  <div class="logo"></div>
+  <div class="login-block" style="background-color: aqua;">
+    <h1>Login</h1>
+    <input type="email" value="" placeholder="Username" id="email" name="email" ngModel required />
+    
+    
+    <input type="password" value="" placeholder="Password" id="password" name="password" ngModel required />
+    
+    
+    <button type="submit" class="btn btn-primary btn-lg" [disabled]="loginForm.invalid">Submit</button>
+    
+  </div>
+</form>
+
+    

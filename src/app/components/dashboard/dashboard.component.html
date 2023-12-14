@@ -1,0 +1,27 @@
+<!-- index.html or your Angular component template -->
+<section class="side-navbar">
+  <ul>
+    <li><a href="#" [class.active]="selectedMenu === 'Home'" (click)="selectMenu('Home')">Home</a></li>
+    <li><a href="#" [class.active]="selectedMenu === 'Student Profile'" (click)="selectMenu('Student Profile')">Student Profile</a></li>
+    
+    <li><a href="#" [class.active]="selectedMenu === 'Make Appointment'" (click)="selectMenu('Make Appointment')">Appointment Details</a></li>
+  </ul>
+</section>
+
+<section class="content">
+  <!-- Your main content goes here -->
+  <div *ngIf="selectedMenu === 'Home'">
+    <app-home-page></app-home-page>
+  </div>
+
+  <div *ngIf="selectedMenu === 'Student Profile'">
+    <app-mystudent-list></app-mystudent-list>
+  </div>
+
+  <div *ngIf="selectedMenu === 'Make Appointment'">
+    <app-appointment></app-appointment>
+  </div>
+  <!-- Add similar sections for other menu items -->
+</section>
+
+

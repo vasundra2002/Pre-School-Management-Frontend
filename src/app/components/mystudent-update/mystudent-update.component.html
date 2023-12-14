@@ -1,0 +1,34 @@
+<h2>Update Student</h2>
+<form (ngSubmit)="update()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Student Name</label>
+      <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" [(ngModel)]="myStudent.name">
+    </div>
+
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Standard</label>
+      <input type="text" class="form-control" id="standard" name="standard" [(ngModel)]="myStudent.standard">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" name="standard" aria-describedby="emailHelp" [(ngModel)]="myStudent.age">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" [(ngModel)]="myStudent.email">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+        <input type="number" class="form-control" id="phonenumber" name="phonenumber" aria-describedby="emailHelp" [(ngModel)]="myStudent.phonenumber">
+      </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>&nbsp;
+    <button type="reset" class="btn btn-primary">Reset</button>
+    <a (click)="gotoMyStudentList()" class="btn btn-primary">Go back to MyStudents</a>
+  </form>
+
+

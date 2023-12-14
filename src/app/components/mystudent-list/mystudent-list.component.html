@@ -1,0 +1,36 @@
+<h1 style="font-style: normal;">STUDENTS DETAILS</h1>
+
+<button  (click)="addMyStudent()" type="button" class="btn btn-primary">Add Student</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Standard</th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mystu of mystudents">
+        <th scope="row">{{mystu.id}}</th>
+        <td>{{mystu.name}}</td>
+        <td>{{mystu.standard}}</td>
+        <td>{{mystu.age}}</td>
+        <td>{{mystu.email}}</td>
+        <td>{{mystu.phonenumber}}</td>
+        <td>
+          <button (click)="updateMyStudent(mystu.id)" type="button" class="btn btn-success">Update</button> &nbsp;
+          <button (click)="viewMyStudent(mystu.id)" type="button" class="btn btn-danger">View</button> &nbsp;
+          <button (click)="deleteMyStudent(mystu.id)" type="button" class="btn btn-warning">Delete</button> &nbsp;
+
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  
